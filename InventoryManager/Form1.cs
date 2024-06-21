@@ -18,7 +18,7 @@ namespace InventoryManager
             InitializeComponent();
         }
 
-        private void newButton_Click(object sender, EventArgs e)
+        private void clear()
         {
             skuTextBox.Text = "";
             nameTextBox.Text = "";
@@ -26,6 +26,10 @@ namespace InventoryManager
             descriptionTextBox.Text = "";
             quantityTextBox.Text = "";
             categoryBox.SelectedIndex = -1;
+        }
+        private void newButton_Click(object sender, EventArgs e)
+        {
+            clear();
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -42,7 +46,7 @@ namespace InventoryManager
             inventory.Rows.Add(sku, name, category, price, description, quantity);
 
             // Clear fields after save
-            newButton_Click(sender, e);
+            clear();
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -53,7 +57,7 @@ namespace InventoryManager
             }
             catch (Exception err)
             {
-                Console.WriteLine("Error: " + err);
+                Console.WriteLine("Error while deleting: " + err);
             }
         }
 
@@ -72,7 +76,7 @@ namespace InventoryManager
             }
             catch(Exception err)
             {
-                Console.WriteLine("There has been an error: " + err);
+                Console.WriteLine("There has been an error applying cell data to fields: " + err);
             }
         }
 

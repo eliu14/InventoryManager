@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             notifyIcon1 = new NotifyIcon(components);
-            label1 = new Label();
+            titleLabel = new Label();
             priceTextBox = new TextBox();
             inventoryGridView = new DataGridView();
             newButton = new Button();
@@ -55,15 +55,15 @@
             notifyIcon1.Text = "notifyIcon1";
             notifyIcon1.Visible = true;
             // 
-            // label1
+            // titleLabel
             // 
-            label1.Font = new Font("Meiryo UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(956, 39);
-            label1.TabIndex = 0;
-            label1.Text = "Inventory Manager Studio XL Supreme";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            titleLabel.Font = new Font("Meiryo UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            titleLabel.Location = new Point(12, 9);
+            titleLabel.Name = "titleLabel";
+            titleLabel.Size = new Size(956, 39);
+            titleLabel.TabIndex = 0;
+            titleLabel.Text = "Inventory Manager Studio XL Supreme";
+            titleLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // priceTextBox
             // 
@@ -233,7 +233,7 @@
             Controls.Add(newButton);
             Controls.Add(inventoryGridView);
             Controls.Add(priceTextBox);
-            Controls.Add(label1);
+            Controls.Add(titleLabel);
             Name = "InventoryManagerStudio";
             Text = "Inventory Manager Studio";
             Load += InventoryManagerStudio_Load;
@@ -245,7 +245,7 @@
         #endregion
 
         private NotifyIcon notifyIcon1;
-        private Label label1;
+        private Label titleLabel;
         private TextBox priceTextBox;
         private DataGridView inventoryGridView;
         private Button newButton;
